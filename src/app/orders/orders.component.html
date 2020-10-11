@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pizza Task</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="src/assets/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="src/assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="src/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="src/assets/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="src/assets/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="src/assets/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="src/assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="src/assets/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Id</th>
+								<th class="column2">Customer Name</th>
+								<th class="column3">No. of Items</th>
+								<th class="column4">Total Amount</th>
+								<th class="column5">Status</th>
+							</tr>
+						</thead>
+						<tbody>
+								<tr *ngFor="let order of orders">
+									<td class="column1">
+                    <a [routerLink]="['details', order.id]">
+                        {{order.id}}
+                    </a>
+                  </td>
+									<td class="column2">
+                    <a [routerLink]="['details', order.id]">
+                      {{order.name}}
+                    </a>
+                  </td>
+									<td class="column3">
+                    <a [routerLink]="['details', order.id]">
+                      {{order.items.length}}
+                    </a>
+                  </td>
+									<td class="column4">
+                    <a [routerLink]="['details', order.id]">
+                      {{getTotal(order.items)}}
+                    </a>
+                  </td>
+									<td class="column5">
+                    <a [routerLink]="['details', order.id]">
+                      {{order.status}}
+                    </a>
+                  </td>
+								</tr>						
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="src/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="src/assets/vendor/bootstrap/js/popper.js"></script>
+	<script src="src/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="src/assets/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="src/assets/js/main.js"></script>
+
+</body>
+</html>
