@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { totalmem } from 'os';
 
 @Component({
   selector: 'app-orders',
